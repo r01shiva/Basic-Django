@@ -1,0 +1,52 @@
+{% extends "personal/header.html" %}
+{% block mark %}
+      <a class="navbar-brand" href="{% url 'mainin' %}">Retrikler</a>
+{% endblock %}
+{% block contact %}
+        <li><a href="{% url 'contactin' %}">Contact us</a></li>
+      {% endblock %}
+{% block product %}
+                      <li><a href="{% url 'index' %}">Products</a></li>
+
+      {% endblock %}
+{% block recycle %}
+                      <li><a href="{% url 'recycle_pro' %}">Recycle</a></li>
+
+      {% endblock %}
+{% block sell %}
+                      <li><a href="{% url 'submit_pro' %}">Sell product</a></li>
+
+      {% endblock %}
+{% block logout %}<li> <a href="{% url 'logout_user' %}"><span class="glyphicon glyphicon-off" ></span>&nbsp; Logout</a></li>
+{% endblock %}472804137
+{% load staticfiles %}
+{% block header %}<img src='{% static 'C:/jango/myproject/personal/static/personal/img/472804137.jpg' %}' style="width: 100%;
+    height:100%;
+    margin-top: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;filter:opacity(70%);"> {% endblock %}
+
+
+{% block content %}
+   <div class="container">
+    <h2>Add Product</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-5">
+                <div class="panel-body">
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'personal/form_template.html' %}
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

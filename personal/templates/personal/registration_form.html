@@ -1,0 +1,29 @@
+{% extends "personal/header.html" %}
+{% load staticfiles %}
+{% block mark %}
+      <a class="navbar-brand" href="{% url 'main' %}">Retrikler</a>
+            {% endblock %}
+{% block contact %}
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+{% endblock %}
+{% block content %}
+   <div class="container">
+    <h2>Registration</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-5">
+                <div class="panel-body">
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'personal/form_template.html' %}
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

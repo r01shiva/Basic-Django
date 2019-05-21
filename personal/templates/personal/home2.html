@@ -1,0 +1,47 @@
+{% extends "personal/header.html" %}
+{% load staticfiles %}
+
+{% block mark %}
+      <a class="navbar-brand" href="{% url 'main' %}">Retrikler</a>
+            {% endblock %}
+{% block contact %}
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+{% endblock %}
+{% block login %}
+    <li><a href="{% url 'signin' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+{% endblock %}
+{% block header %}<img src='{% static 'C:/jango/myproject/personal/static/personal/img/profile.jpg' %}' style="size: cover;width: 100%;
+    height: 150%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;filter:opacity(30%);"> {% endblock %}
+{% block content %}
+<div style="position: relative" >
+    <div class="content">
+        <img src={% static 'C:/jango/myproject/personal/static/personal/img/1957ab153e19139.jpg'%} id="right"  >
+          <h1 style="font-family:cursive;color:#2E4053" >Why?</h1>
+          <p>By using recycled materials we save on energy consumption,<br> which keeps production costs down.</p>
+    <br>
+          <h1 style="font-family:cursive;color:#2E4053">What?</h1>
+          <p>The following items should not be placed into your recycling bin:<br>
+              Any glass contaminated with stones, dirt, and food waste. Ceramics,<br>
+              such as dishware, ovenware, and decorative items.<br>
+              Heat-resistant glass, such as Pyrex. Mixed colors of broken glass.<br>
+              Mirror or window glass. Metal or plastic caps and lids. Crystal.</p>
+    <br>
+          <h1 style="font-family:cursive;color:#2E4053">How?</h1>
+    <h4><strong>What should we do with our old electronics?</strong></h4>
+               <p>   First, we should never throw e-waste in the trash!<br>
+                   <ol type="i">
+    <li>Pass them on for reuse.</li>
+    <li>Recycle them.</li>
+    <li>Find a good e-waste recycler.</li>
+    <li>Staples stores.</li>
+    <li>Best Buy stores.</li>
+    <li>Do a cell phone recycling drive and fundraiser in your school.</li>
+    <li>Learn to fix broken gadgets yourself.</li>
+               </p>
+</div>
+</div>
+{% endblock %}

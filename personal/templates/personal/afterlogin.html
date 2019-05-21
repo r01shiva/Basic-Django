@@ -1,0 +1,38 @@
+{% extends "personal/header.html" %}
+{% load staticfiles %}
+{% block mark %}
+      <a class="navbar-brand" href="{% url 'mainin' %}">Retrikler</a>
+{% endblock %}
+{% block contact %}
+        <li><a href="{% url 'contactin' %}">Contact us</a></li>
+      {% endblock %}
+{% block product %}
+                      <li><a href="{% url 'index' %}">Products</a></li>
+      {% endblock %}
+{% block recycle %}
+                      <li><a href="{% url 'recycle_pro' %}">Recycle</a></li>
+{% endblock %}
+{% block sell %}
+                      <li><a href="{% url 'submit_pro' %}">Sell product</a></li>
+
+{% endblock %}
+{% block logout %}<li> <a href="{% url 'logout_user' %}"><span class="glyphicon glyphicon-off" ></span>&nbsp; Logout</a></li>
+{% endblock %}
+{% block header %}<img src='{% static 'C:/jango/myproject/personal/static/personal/img/1.jpg' %}' style="width: 100%;
+    height:100%;
+    margin-top: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;filter:opacity(70%);"> {% endblock %}
+{% block content %}
+<div class="container-fluid bg-2 text-right">
+<div style="margin-top: 200px;
+    margin-bottom: 200px;">
+    <a href="{% url 'recycle_pro' %}" class="btn btn-default btn-lg">Want to Recycle</a>
+    <a href="{% url 'submit_pro' %}" class="btn btn-default btn-lg">Sell your Goods</a>
+    <a href="{% url 'index' %}" class="btn btn-default btn-lg">Buy Products</a>
+</div>
+
+</div>
+{% endblock %}

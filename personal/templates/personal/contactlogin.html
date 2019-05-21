@@ -1,0 +1,48 @@
+{% extends "personal/header.html" %}
+{% load staticfiles %}
+{% block mark %}
+      <a class="navbar-brand" href="{% url 'mainin' %}">Retrikler</a>
+{% endblock %}
+{% block contact %}
+        <li><a href="{% url 'contactin' %}">Contact us</a></li>
+      {% endblock %}
+{% block product %}
+                      <li><a href="{% url 'index' %}">Products</a></li>
+
+      {% endblock %}
+{% block recycle %}
+                      <li><a href="{% url 'recycle_pro' %}">Recycle</a></li>
+
+      {% endblock %}
+{% block sell %}
+                      <li><a href="{% url 'submit_pro' %}">Sell product</a></li>
+
+      {% endblock %}
+{% block logout %}<li> <a href="{% url 'logout_user' %}"><span class="glyphicon glyphicon-off" ></span>&nbsp; Logout</a></li>
+{% endblock %}
+
+{% block header %}<img src='{% static 'C:/jango/myproject/personal/static/personal/img/texturas papel (6).jpg' %}' style=";width: 100%;
+    height:110%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;filter:opacity(70%);"> {% endblock %}
+
+{% block content %}
+  <!-- The Contact Section -->
+    <div style="margin-bottom: 100px">
+  <div style="padding: 62px;padding-left: 500px" id="contact">
+    <h2>CONTACT</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> New Delhi<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +91989991756<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: recyclergreen@support.com<br>
+      </div>
+    </div>
+  </div>
+    </div>
+
+<!-- End Page Content -->
+
+{% endblock %}

@@ -1,0 +1,66 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+}
+.header{
+	background-color:white;
+	padding:20px;
+	text-align: left;
+	color:#45A556;
+}
+.topna{
+	overflow: hidden;
+	background-color: #45A556;
+}
+.topna a {
+    	float: left;
+    	display: block;
+    	color: #F1f1f1;
+    	text-align: left;
+    	padding: 14px 16px;
+    	text-decoration: none;
+}
+.topnav a:hover {
+    	background-color: #ddd;
+    	color: black;
+}
+.size{
+	width:200px;
+        height: 200px;
+}
+.content{
+	padding:20px
+}
+#right{
+	float:right;
+        padding-right: 100px;
+        border:1px #1e7e34 none;
+}
+.right{
+	float:right;
+}
+.sign{
+	float:left;
+}
+.img{
+	float:right; 
+	padding:50px 100px;
+}
+.image {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+logo{
+    font-variant: small-caps;
+    font-family: 'Eagle Lake', cursive;
+}
+footer{
+    background-color: #45A556;
+    text-align: center;
+    padding: 25px ;
+    color:#F1f1f1;
+    margin-bottom: 0%;
+}

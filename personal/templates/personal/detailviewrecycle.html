@@ -1,0 +1,55 @@
+{% extends "personal/header.html" %}
+{% load staticfiles %}
+{% block mark %}
+      <a class="navbar-brand" href="{% url 'mainin' %}">Retrikler</a>
+{% endblock %}
+{% block contact %}
+        <li><a href="{% url 'contactin' %}">Contact us</a></li>
+      {% endblock %}
+{% block product %}
+                      <li><a href="{% url 'index' %}">Products</a></li>
+
+      {% endblock %}
+{% block recycle %}
+                      <li><a href="{% url 'recycle_pro' %}">Recycle</a></li>
+
+      {% endblock %}
+{% block sell %}
+                      <li><a href="{% url 'submit_pro' %}">Sell product</a></li>
+
+      {% endblock %}
+{% block logout %}<li> <a href="{% url 'logout_user' %}"><span class="glyphicon glyphicon-off" ></span>&nbsp; Logout</a></li>
+{% endblock %}
+
+    {% block header %}<img src='{% static 'C:/jango/myproject/personal/static/personal/img/download.jpg' %}' style="width: 50%;
+    height:50%;
+    margin-top: 350px;
+    margin-left:600px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;filter:opacity(70%);"> {% endblock %}
+{% block content %}
+<div class="container">
+            <h2>{{ recycle.Type }}</h2>
+                <div style="width: 300px;length: 400px">
+                            <img src="{{ recycle.Image.url }}" class="img-responsive">
+                        </a>
+                        <div class="caption">
+                            <h5> <b>Description:</b>{{ recycle.Description}}</h5>
+                            <h5> <b> Name of Customer:</b>{{ recycle.Name}}</h5>
+                            <h5>  <b>Contact No.:</b>{{ recycle.Contact}}</h5>
+                            <h5>  <b>Address:</b>{{ recycle.Address}}</h5>
+                            <h5> <b> City:</b>{{ recycle.City}}</h5>
+                            <h5> <b> Expected Value</b>{{ recycle.Expected_price}}</h5>
+
+                            <!-- View Details
+                            <a href="#" class="btn btn-primary btn-sm" role="button">View Details</a>-->
+                        </div>
+                </div>
+    <br><br>
+    <h3><center><strong>
+        WE WILL CONTACT YOU SOON!</strong></center></h3>
+    <a href="{% url 'main' %}"><b>Back</b></a>
+    </div>
+{% endblock %}

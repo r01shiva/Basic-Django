@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>RetrikleR</title>
+	<meta charset="utf-8">
+    {% load staticfiles %}
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Eagle+Lake" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" type="text/css" href="{% static 'personal/css/mystyle.css' %}">
+   </head>
+<body>
+<div class="header">
+  <h1><logo><img src="{% static 'C:/jango/myproject/personal/static/personal/img/ghghg.jpg'%}" class="image">RetrikleR</logo></h1>
+</div>
+<div class="topna topnav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <div style="font-family: 'Eagle Lake', cursive;">
+            {% block mark %}
+            {% endblock %}
+            </div>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      {% block contact %}
+      {% endblock %}
+          {% block product %}
+
+
+      {% endblock %}
+      {% block recycle %}
+      {% endblock %}
+      {% block sell %}
+      {% endblock %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      {% block login %}
+      {% endblock %}
+          {% block logout %}
+          {% endblock %}
+      </ul>
+    </div>
+  </div>
+</div>
+<div>
+{% block header %}
+{% endblock %}
+			   {% block content %}
+			   {% endblock %}
+</div>
+<br>
+<br>
+<br>
+<footer>
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="{% url 'contact' %}" target="_blank" class="w3-hover-text-blue">Retriklers</a></p>
+</footer>
+</body>
+</html>
